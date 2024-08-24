@@ -1,2 +1,2 @@
 # adventofcode.linq
-AdventOfCode, solved in LinqPad
+[Advent of Code](https://adventofcode.com), in [LinqPad](https://linqpad.net/) with [C#](https://en.wikipedia.org/wiki/C_Sharp_(programming_language)).
