@@ -7,7 +7,7 @@
 void Main()
 {
     Point4D[] input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private const int MaxConstellationEdgeLength = 3;
@@ -62,6 +62,6 @@ private record struct Point4D(int X, int Y, int Z, int W)
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

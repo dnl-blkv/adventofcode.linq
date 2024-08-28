@@ -7,8 +7,8 @@
 void Main()
 {
     IReadOnlyList<string> program = ParseInput(GetInput());
-	Solve1(program).Dump();
-	Solve2(program).Dump();
+    Solve1(program).Dump();
+    Solve2(program).Dump();
 }
 
 private delegate Func<int> CommandFactory(
@@ -101,6 +101,6 @@ private static IReadOnlyList<string> ParseInput(IEnumerable<string> input) => in
         
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

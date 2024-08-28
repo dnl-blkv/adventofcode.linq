@@ -7,7 +7,7 @@
 void Main()
 {
     string input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private const int PasswordLength = 8;
@@ -61,6 +61,6 @@ private static string ParseInput(IEnumerable<string> input) => input.Single();
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

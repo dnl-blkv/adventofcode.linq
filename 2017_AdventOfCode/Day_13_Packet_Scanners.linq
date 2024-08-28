@@ -7,8 +7,8 @@
 void Main()
 {
     Layer[] input = ParseInput(GetInput());
-	Solve1(input).Dump();
-	Solve2(input).Dump();
+    Solve1(input).Dump();
+    Solve2(input).Dump();
 }
 
 private static readonly List<long> PrimeList = [2, 3];
@@ -213,6 +213,6 @@ private record struct Layer
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

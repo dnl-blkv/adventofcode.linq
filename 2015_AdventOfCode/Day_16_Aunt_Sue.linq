@@ -6,8 +6,8 @@
 void Main()
 {
     IReadOnlyList<AuntSue> input = ParseInput(GetInput());
-	Solve1(input).Dump();
-	Solve2(input).Dump();
+    Solve1(input).Dump();
+    Solve2(input).Dump();
 }
 
 private static AuntSuePropMatcher[] V1PropMatchers =
@@ -144,6 +144,6 @@ private class AuntSuePropMatcher
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

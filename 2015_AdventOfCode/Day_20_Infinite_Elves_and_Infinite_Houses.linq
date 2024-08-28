@@ -7,8 +7,8 @@ void Main()
 {
     int input = ParseInput(GetInput());
     Primes primes = Primes.Create((int)Math.Sqrt(input / Math.Min(InputDivisor1, InputDivisor2)));
-	Solve1(input, primes).Dump();
-	Solve2(input, primes).Dump();
+    Solve1(input, primes).Dump();
+    Solve2(input, primes).Dump();
 }
 
 private const int InputDivisor1 = 10;
@@ -100,6 +100,6 @@ private class Primes
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

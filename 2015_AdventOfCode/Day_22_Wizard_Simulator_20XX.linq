@@ -7,8 +7,8 @@
 void Main()
 {
     Wizard boss = ParseInput(GetInput());
-	Solve1(boss).Dump();
-	Solve2(boss).Dump();
+    Solve1(boss).Dump();
+    Solve2(boss).Dump();
 }
 
 private const string PhysicalDamageEffectName = "PhysicalDamage";
@@ -386,6 +386,6 @@ private class Recharge : ISpell
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

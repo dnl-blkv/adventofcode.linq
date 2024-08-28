@@ -6,8 +6,8 @@
 void Main()
 {
     IReadOnlyDictionary<(char Guest1, char Guest2), int> input = ParseInput(GetInput());
-	Solve1(input).Dump();
-	Solve2(input).Dump();
+    Solve1(input).Dump();
+    Solve2(input).Dump();
 }
 
 const char Yourself = 'Y';
@@ -142,6 +142,6 @@ private static IReadOnlyDictionary<(char Guest1, char Guest2), int> ParseInput(I
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

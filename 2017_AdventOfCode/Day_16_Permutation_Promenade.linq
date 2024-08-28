@@ -7,7 +7,7 @@
 void Main()
 {
     Action<Memory>[] input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private const int MemSize = 16;
@@ -125,6 +125,6 @@ private class Memory
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

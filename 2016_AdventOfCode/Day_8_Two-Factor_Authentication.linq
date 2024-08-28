@@ -7,7 +7,7 @@
 void Main()
 {
     Action<char[][]>[] input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private const int ScreenHeight = 6;
@@ -129,6 +129,6 @@ private static long GetGreatestCommonDivisor(params long[] vals)
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

@@ -7,8 +7,8 @@
 void Main()
 {
     (int A, int B, int C)[] input = ParseInput(GetInput());
-	Solve1(input).Dump();
-	Solve2(input).Dump();
+    Solve1(input).Dump();
+    Solve2(input).Dump();
 }
 
 private static long Solve1((int A, int B, int C)[] input) =>
@@ -41,6 +41,6 @@ private static (int A, int B, int C)[] ParseInput(IEnumerable<string> input) =>
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

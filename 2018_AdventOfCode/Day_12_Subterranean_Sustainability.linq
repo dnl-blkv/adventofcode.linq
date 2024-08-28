@@ -7,7 +7,7 @@
 void Main()
 {
     (string initialState, IReadOnlyDictionary<string, char> mutations) = ParseInput(GetInput());
-	Solve(initialState, mutations).Dump();
+    Solve(initialState, mutations).Dump();
 }
 
 private const int GenerationCount1 = 20;
@@ -93,6 +93,6 @@ private static (string InitialState, IReadOnlyDictionary<string, char> Mutations
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

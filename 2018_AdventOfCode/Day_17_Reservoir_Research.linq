@@ -7,7 +7,7 @@
 void Main()
 {
     IReadOnlyList<Point> input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private static readonly Point Source = new Point(Y: 0, X: 500);
@@ -189,6 +189,6 @@ private record struct Point(int Y, int X)
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

@@ -8,8 +8,8 @@ void Main()
     (
         IReadOnlyDictionary<string, IReadOnlyList<string>> replacementTable,
         string medicineMolecule) = ParseInput(GetInput());
-	Solve1(replacementTable, medicineMolecule).Dump();
-	Solve2(replacementTable, medicineMolecule).Dump();
+    Solve1(replacementTable, medicineMolecule).Dump();
+    Solve2(replacementTable, medicineMolecule).Dump();
 }
 
 private static int Solve1(
@@ -117,6 +117,6 @@ private static (
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

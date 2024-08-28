@@ -7,7 +7,7 @@
 void Main()
 {
     int[] input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private static (long Result1, long Result2) Solve(int[] input)
@@ -66,6 +66,6 @@ private static int[] ParseInput(IEnumerable<string> input) =>
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

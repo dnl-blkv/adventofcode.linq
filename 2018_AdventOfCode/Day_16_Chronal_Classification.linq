@@ -7,7 +7,7 @@
 void Main()
 {
     (IReadOnlyList<Sample> samples, IReadOnlyList<int[]> program) = ParseInput(GetInput());
-	Solve(samples, program).Dump();
+    Solve(samples, program).Dump();
 }
 
 private delegate void Operation(int[] reg, int a, int b, int c);
@@ -168,6 +168,6 @@ private record struct Sample
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

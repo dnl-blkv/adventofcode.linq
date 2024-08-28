@@ -7,8 +7,8 @@
 void Main()
 {
     (IReadOnlyList<Group> immuneSystem, IReadOnlyList<Group> infection) = ParseInput(GetInput());
-	Solve1(immuneSystem, infection).Dump();
-	Solve2(immuneSystem, infection).Dump();
+    Solve1(immuneSystem, infection).Dump();
+    Solve2(immuneSystem, infection).Dump();
 }
 
 private static long Solve1(IReadOnlyList<Group> immuneSystem, IReadOnlyList<Group> infection) =>
@@ -268,6 +268,6 @@ private class Group
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

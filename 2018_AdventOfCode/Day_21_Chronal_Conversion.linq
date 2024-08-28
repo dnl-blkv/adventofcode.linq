@@ -9,7 +9,7 @@ void Main()
     string[] input = ParseInput(GetInput());
     // Uncomment the line below to see the input program:
     // input.Dump();
-	Solve().Dump();
+    Solve().Dump();
 }
 
 /***
@@ -90,6 +90,6 @@ private static string[] ParseInput(IEnumerable<string> input) => input.ToArray()
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

@@ -7,7 +7,7 @@
 void Main()
 {
     IReadOnlyDictionary<int, HashSet<int>> input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private static (long Result1, long Result2) Solve(IReadOnlyDictionary<int, HashSet<int>> input)
@@ -57,6 +57,6 @@ private static IReadOnlyDictionary<int, HashSet<int>> ParseInput(IEnumerable<str
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

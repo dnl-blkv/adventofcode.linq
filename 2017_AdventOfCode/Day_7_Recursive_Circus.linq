@@ -7,7 +7,7 @@
 void Main()
 {
     IReadOnlyDictionary<string, Program> input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private static (string Result1, int Result2) Solve(IReadOnlyDictionary<string, Program> input)
@@ -75,6 +75,6 @@ private record struct Program(string Name, int Weight, IReadOnlyList<string> Chi
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

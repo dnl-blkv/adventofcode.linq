@@ -7,7 +7,7 @@
 void Main()
 {
     (int row, int column) = ParseInput(GetInput());
-	Solve(row, column).Dump();
+    Solve(row, column).Dump();
 }
 
 private static long Solve(int row, int column)
@@ -35,6 +35,6 @@ private static (int Row, int Column) ParseInput(IEnumerable<string> input)
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

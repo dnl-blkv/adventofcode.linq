@@ -7,7 +7,7 @@
 void Main()
 {
     BunnyProgram input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private const string Out = "out";
@@ -126,6 +126,6 @@ private class BunnyProgram(IReadOnlyList<Func<IDictionary<string, long>, int, in
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

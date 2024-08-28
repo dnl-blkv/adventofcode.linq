@@ -7,7 +7,7 @@
 void Main()
 {
     (int depth, Point target) = ParseInput(GetInput());
-	Solve(depth, target).Dump();
+    Solve(depth, target).Dump();
 }
 
 private enum GearType
@@ -174,6 +174,6 @@ private record struct State(GearType GearType, Point Position, int WaitTime)
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

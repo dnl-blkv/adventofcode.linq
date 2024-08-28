@@ -8,7 +8,7 @@ void Main()
 {
     int input = ParseInput(GetInput());
     Solve1(input).Dump();
-	Solve2(input).Dump();
+    Solve2(input).Dump();
 }
 
 private static readonly IReadOnlyList<Point> Directions =
@@ -91,6 +91,6 @@ private record class Point(int I, int J)
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

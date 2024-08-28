@@ -7,8 +7,8 @@
 void Main()
 {
     Particle3D[] input = ParseInput(GetInput());
-	Solve1(input).Dump();
-	Solve2(input).Dump();
+    Solve1(input).Dump();
+    Solve2(input).Dump();
 }
 
 private static long Solve1(Particle3D[] input) =>
@@ -150,6 +150,6 @@ private record struct Point3D(int X, int Y, int Z)
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

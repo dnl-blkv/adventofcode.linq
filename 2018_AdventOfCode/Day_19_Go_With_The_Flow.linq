@@ -9,8 +9,8 @@ void Main()
     (int ip, IReadOnlyList<(string Cmd, int[] Args)> program) = ParseInput(GetInput());
     // Uncomment the line below to see unoptimized C# code of the input program:
     // Visualize(ip, program);
-	Solve1(ip, program).Dump();
-	Solve2(ip, program).Dump();
+    Solve1(ip, program).Dump();
+    Solve2(ip, program).Dump();
 }
 
 private delegate string Visualizer(int a, int b, int c);
@@ -136,6 +136,6 @@ private static int[] ToIntArray(IEnumerable<string> intStrings) =>
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

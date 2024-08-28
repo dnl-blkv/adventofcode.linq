@@ -7,7 +7,7 @@
 void Main()
 {
     (char T, int C)[] input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private static readonly IReadOnlyDictionary<(char D, char T), char> TurnTable =
@@ -69,6 +69,6 @@ private static (char D, int C)[] ParseInput(IEnumerable<string> input) =>
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

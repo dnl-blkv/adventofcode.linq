@@ -5,7 +5,7 @@
 void Main()
 {
     IReadOnlyList<Instruction> input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private static (int Result1, int Result2) Solve(IReadOnlyList<Instruction> input)
@@ -124,6 +124,6 @@ private static class OperationTypes
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

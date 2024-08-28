@@ -7,8 +7,8 @@
 void Main()
 {
     (int playerCount, int lastMarble) = ParseInput(GetInput());
-	Solve1(playerCount, lastMarble).Dump();
-	Solve2(playerCount, lastMarble).Dump();
+    Solve1(playerCount, lastMarble).Dump();
+    Solve2(playerCount, lastMarble).Dump();
 }
 
 private const int InsertShift = 1;
@@ -111,6 +111,6 @@ private class Node(long value)
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

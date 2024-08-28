@@ -7,7 +7,7 @@
 void Main()
 {
     IReadOnlyDictionary<int, List<GuardShift>> input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private const int MinutesInHour = 60;
@@ -129,6 +129,6 @@ private record struct OldTime(int Year, int Month, int Day, int Hour, int Minute
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

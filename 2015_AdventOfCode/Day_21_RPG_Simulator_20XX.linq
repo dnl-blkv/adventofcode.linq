@@ -6,8 +6,8 @@
 void Main()
 {
     (Shop shop, Fighter boss) = ParseInput(GetInput());
-	Solve1(shop, boss).Dump();
-	Solve2(shop, boss).Dump();
+    Solve1(shop, boss).Dump();
+    Solve2(shop, boss).Dump();
 }
 
 const int PlayerHitPoints = 100;
@@ -194,6 +194,6 @@ private class Fighter
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

@@ -7,8 +7,8 @@
 void Main()
 {
     IpV7[] input = ParseInput(GetInput());
-	Solve1(input).Dump();
-	Solve2(input).Dump();
+    Solve1(input).Dump();
+    Solve2(input).Dump();
 }
 
 private static long Solve1(IpV7[] input) =>
@@ -77,6 +77,6 @@ private record struct IpV7(IReadOnlyList<string> SupernetSequences, IReadOnlyLis
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }

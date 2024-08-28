@@ -7,7 +7,7 @@
 void Main()
 {
     Given input = ParseInput(GetInput());
-	Solve(input).Dump();
+    Solve(input).Dump();
 }
 
 private delegate StateBranch ProcessState(bool currentValue);
@@ -78,6 +78,6 @@ private readonly record struct StateBranch(bool ValueToWrite, int MoveDelta, cha
 
 private static IEnumerable<string> GetInput()
 {
-	using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
-	while (inputStream.ReadLine() is { } line) yield return line;
+    using var inputStream = new StreamReader($"{Util.CurrentQueryPath[..^5]}_Input.txt");
+    while (inputStream.ReadLine() is { } line) yield return line;
 }
